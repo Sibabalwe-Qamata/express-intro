@@ -4,6 +4,9 @@ let app = express();
 //Handlebars Section ...
 const exphbs  = require('express-handlebars');
 
+//Static Resource
+app.use(express.static('public'));
+
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
